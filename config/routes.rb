@@ -1,7 +1,4 @@
 Northwind::Application.routes.draw do
-  resources :customer_customer_demos
-
-
   resources :order_details
 
 

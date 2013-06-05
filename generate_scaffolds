@@ -1,0 +1,25 @@
+rails generate scaffold Shipper CompanyName:string Phone:string --migration false
+
+rails generate scaffold Category CategoryName:string Description:string Picture:string --migration false
+
+rails generate scaffold Customer CompanyName:string ContactName:string ContactTitle:string Address:string City:string Region:string PostalCode:string Country:string Phone:string Fax:string --migration false
+
+rails generate scaffold Employee LastName:string FirstName:string Title:string TitleOfCourtesy:string Birthdate:date Hiredate:date Address:string City:string Region:string PostalCode:string Country:string HomePhone:string Extension:string Photo:string Notes:string PhotoPath:string --migration false
+
+rails generate scaffold Order Orderdate:date, Shippeddate:date, Freight:float ShipName:string ShipAddress:string ShipCity:string ShipRegion:string ShipPostalCode:string ShipCountry:string --migration false
+
+rails generate scaffold Product ProductName:string QuantityPerUnit:string UnitPrice:float UnitsInStock:integer UnitsOnOrder:integer ReorderLevel:integer Discontinued:integer --migration false
+
+rails generate scaffold Region RegionDescription:string --migration false
+
+rails generate scaffold Supplier CompanyName:string ContactName:string ContactTitle:string Address:string City:string Region:string PostalCode:string Country:string Phone:string Fax:string HomePage:string --migration false
+
+rails generate scaffold Territory TerritoryDescription:string --migration false
+
+rails generate scaffold Usstate StateName:string StateAbbr:string StateRegion:string --migration false
+
+rails generate scaffold CustomerDemographic CustomerDesc:string --migration false
+
+rails generate scaffold OrderDetail UnitPrice:decimal Quantity:integer Discount:decimal --migration false
+
+rails generate scaffold CustomerCustomerDemo --migration false

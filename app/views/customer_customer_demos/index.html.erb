@@ -1,0 +1,21 @@
+<h1>Listing customer_customer_demos</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @customer_customer_demos.each do |customer_customer_demo| %>
+  <tr>
+    <td><%= link_to 'Show', customer_customer_demo %></td>
+    <td><%= link_to 'Edit', edit_customer_customer_demo_path(customer_customer_demo) %></td>
+    <td><%= link_to 'Destroy', customer_customer_demo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Customer customer demo', new_customer_customer_demo_path %>

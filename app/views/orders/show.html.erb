@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Orderdate:</b>
+  <%= @order.Orderdate %>
+</p>
+
+<p>
+  <b>Shippeddate:</b>
+  <%= @order.Shippeddate %>
+</p>
+
+<p>
+  <b>Freight:</b>
+  <%= @order.Freight %>
+</p>
+
+<p>
+  <b>Shipname:</b>
+  <%= @order.ShipName %>
+</p>
+
+<p>
+  <b>Shipaddress:</b>
+  <%= @order.ShipAddress %>
+</p>
+
+<p>
+  <b>Shipcity:</b>
+  <%= @order.ShipCity %>
+</p>
+
+<p>
+  <b>Shipregion:</b>
+  <%= @order.ShipRegion %>
+</p>
+
+<p>
+  <b>Shippostalcode:</b>
+  <%= @order.ShipPostalCode %>
+</p>
+
+<p>
+  <b>Shipcountry:</b>
+  <%= @order.ShipCountry %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

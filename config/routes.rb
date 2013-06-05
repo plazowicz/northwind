@@ -1,4 +1,43 @@
 Northwind::Application.routes.draw do
+  resources :customer_customer_demos
+
+
+  resources :order_details
+
+
+  resources :customer_demographics
+
+
+  resources :usstates
+
+
+  resources :territories
+
+
+  resources :suppliers
+
+
+  resources :regions
+
+
+  resources :products
+
+
+  resources :orders
+
+
+  resources :employees
+
+
+  resources :customers
+
+
+  resources :categories
+
+
+  resources :shippers
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

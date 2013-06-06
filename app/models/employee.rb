@@ -11,10 +11,10 @@ class Employee < ActiveRecord::Base
 
   has_and_belongs_to_many :territories, join_table: :employeeterritories, foreign_key: "EmployeeID", association_foreign_key: "TerritoryID"
 	
-	before_validation :increment_fucking_id
+	before_validation :incrementID
 
 
-	def increment_fucking_id
+	def incrementID
 		self.EmployeeID = Employee.maximum("EmployeeID") + 1
 	end
 

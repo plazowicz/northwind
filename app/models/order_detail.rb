@@ -8,9 +8,15 @@ class OrderDetail < ActiveRecord::Base
 	def self.new_order(order_id, product_id)
 			ActiveRecord::Base.transaction do
 				od = OrderDetail.new
+				product = Product.find(product_id)
+				if product.UnitPrice < 10.0
+					raise ActiveRecord::Rollback
+				end
 				od.product = Product.find(product_id)
 				od,order = Order.find(order_id)
 				od.save
 			end
 	end
+
+
 end

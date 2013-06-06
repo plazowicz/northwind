@@ -6,9 +6,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: north
-  username: date
-  password: password
+  database: northwind
+  username: andrewbrozek
+  password: codd
   host: localhost
   pool: 5
   timeout: 5000

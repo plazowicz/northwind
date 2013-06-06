@@ -7,8 +7,6 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 gem 'composite_primary_keys'
-gem 'execjs'
-gem 'therubyracer'
 
 # Gems used only for assets and not required
 # in production environments by default.

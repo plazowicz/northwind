@@ -7,6 +7,6 @@ class Employee < ActiveRecord::Base
 
   has_many :subordinates, class_name: "Employee", foreign_key: "ReportsTo"
 
-  has_and_belongs_to_many :territories, through: :employee_territories, foreign_key: "EmployeeID"
+  has_and_belongs_to_many :territories, join_table: :employeeterritories, foreign_key: "EmployeeID", association_foreign_key: "TerritoryID"
 
 end

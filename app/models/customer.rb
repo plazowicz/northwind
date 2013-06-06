@@ -3,8 +3,6 @@ class Customer < ActiveRecord::Base
 
   has_many :orders, foreign_key: "CustomerID"
 
-  has_many :customer_customer_demos, foreign_key: "CustomerID"
-
-  has_and_belongs_to_many :customer_demographics, through: :customer_customer_demo, foreign_key: "CustomerID"
+  has_and_belongs_to_many :customer_demographics, join_table: :customercustomerdemo, foreign_key: "CustomerID", association_foreign_key: "CustomerTypeID"
 
 end

@@ -21,5 +21,3 @@ rails generate scaffold Usstate StateName:string StateAbbr:string StateRegion:st
 rails generate scaffold CustomerDemographic CustomerDesc:string --migration false
 
 rails generate scaffold OrderDetail UnitPrice:decimal Quantity:integer Discount:decimal --migration false
-
-rails generate scaffold CustomerCustomerDemo --migration false

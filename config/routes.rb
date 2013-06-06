@@ -1,7 +1,4 @@
 Northwind::Application.routes.draw do
-  resources :stores
-
-
   resources :order_details
 
 

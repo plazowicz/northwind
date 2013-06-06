@@ -1,0 +1,23 @@
+rails destroy scaffold Shipper
+
+rails destroy scaffold Category
+
+rails destroy scaffold Customer
+
+rails destroy scaffold Employee
+
+rails destroy scaffold Order
+
+rails destroy scaffold Product
+
+rails destroy scaffold Region
+
+rails destroy scaffold Supplier
+
+rails destroy scaffold Territory
+
+rails destroy scaffold Usstate
+
+rails destroy scaffold CustomerDemographic
+
+rails destroy scaffold OrderDetail

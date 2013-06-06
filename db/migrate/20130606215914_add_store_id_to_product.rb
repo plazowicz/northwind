@@ -1,5 +1,5 @@
 class AddStoreIdToProduct < ActiveRecord::Migration
   def change
-		add_column :products, :store_id, :integer
+		rename_column :employees, :EmployeeID, :id
   end
 end

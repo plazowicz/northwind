@@ -1,5 +1,7 @@
 class Employee < ActiveRecord::Base
-  attr_accessible :Address, :Birthdate, :City, :Country, :Extension, :FirstName, :Hiredate, :HomePhone, :LastName, :Notes, :Photo, :PhotoPath, :PostalCode, :Region, :Title, :TitleOfCourtesy
+	set_table_name "employees"
+
+  attr_accessible :Address, :Birthdate, :City, :Country, :Extension, :FirstName, :Hiredate, :HomePhone, :LastName, :Notes, :Photo, :PhotoPath, :PostalCode, :Region, :Title, :TitleOfCourtesy, :EmployeeID
 
   has_many :orders, foreign_key: "EmployeeID"
 
@@ -8,5 +10,12 @@ class Employee < ActiveRecord::Base
   has_many :subordinates, class_name: "Employee", foreign_key: "ReportsTo"
 
   has_and_belongs_to_many :territories, join_table: :employeeterritories, foreign_key: "EmployeeID", association_foreign_key: "TerritoryID"
+	
+	before_validation :increment_fucking_id
+
+
+	def increment_fucking_id
+		self.EmployeeID = Employee.maximum("EmployeeID") + 1
+	end
 
 end

@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessible :Discontinued, :ProductName, :QuantityPerUnit, :ReorderLevel, :UnitPrice, :UnitsInStock, :UnitsOnOrder
+  attr_accessible :Discontinued, :ProductName, :QuantityPerUnit, :ReorderLevel, :UnitPrice, :UnitsInStock, :UnitsOnOrder, :ProductID
 
   belongs_to :supplier, foreign_key: "SupplierID"
   belongs_to :category, foreign_key: "CategoryID"
@@ -13,5 +13,11 @@ class Product < ActiveRecord::Base
 	  product = Product.find(product_id)
 		product.update_attributes!(:UnitsInStock => -amount)
 		product.update_attributes!(:UnitsOnOrder => amount)
+	end
+
+	before_validation :incrementID
+
+	def incrementID
+		self.ProductID = Product.maximum("ProductID") + 1
 	end
 end

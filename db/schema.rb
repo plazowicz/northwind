@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130606194758) do
+ActiveRecord::Schema.define(:version => 20130606210316) do
 
   create_table "categories", :id => false, :force => true do |t|
     t.integer "CategoryID",   :limit => 2,  :null => false
@@ -112,6 +112,14 @@ ActiveRecord::Schema.define(:version => 20130606194758) do
   create_table "region", :id => false, :force => true do |t|
     t.integer "RegionID",          :limit => 2,   :null => false
     t.string  "RegionDescription", :limit => nil
+  end
+
+  create_table "searches", :force => true do |t|
+    t.integer  "category_id"
+    t.decimal  "minimum_price"
+    t.decimal  "maximum_price"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "shippers", :id => false, :force => true do |t|

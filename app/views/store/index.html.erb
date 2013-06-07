@@ -1,0 +1,13 @@
+<h1>Store#index</h1>
+
+<%= form_tag("/store/search", :method => "get") do %>
+    <%= label_tag(:name, "Search for product by name:") %>
+    <%= text_field_tag(:name) %>
+    <%= submit_tag("Search") %>
+<% end %>
+
+<%= form_tag("/store/show", :method => "get") do %>
+    <%= label_tag(:country, "Show customer by country:") %>
+    <%= text_field_tag(:country) %>
+    <%= submit_tag("Browse") %>
+<% end %>

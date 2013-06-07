@@ -1,4 +1,13 @@
 Northwind::Application.routes.draw do
+  
+  get "store/search"
+
+  get "store/show"
+
+  get "store/index"
+
+  root to: "store#index"
+
   resources :order_details
 
 

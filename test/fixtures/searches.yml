@@ -1,0 +1,9 @@
+one:
+  category_id: 1
+  minimum_price: 9.99
+  maximum_price: 9.99
+
+two:
+  category_id: 1
+  minimum_price: 9.99
+  maximum_price: 9.99

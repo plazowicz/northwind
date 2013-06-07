@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: northwind
+  database: northwind_development
   username: codd
   password: boyce
   host: localhost

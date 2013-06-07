@@ -4,7 +4,7 @@ rails generate scaffold Category CategoryName:string Description:string Picture:
 
 rails generate scaffold Customer CompanyName:string ContactName:string ContactTitle:string Address:string City:string Region:string PostalCode:string Country:string Phone:string Fax:string --migration false
 
-rails generate scaffold Employee LastName:string FirstName:string Title:string TitleOfCourtesy:string Birthdate:date Hiredate:date Address:string City:string Region:string PostalCode:string Country:string HomePhone:string Extension:string Photo:string Notes:string PhotoPath:string --migration false
+rails generate scaffold Employee LastName:string FirstName:string Title:string TitleOfCourtesy:string BirthDate:date HireDate:date Address:string City:string Region:string PostalCode:string Country:string HomePhone:string Extension:string Photo:string Notes:string PhotoPath:string --migration false
 
 rails generate scaffold Order Orderdate:date, Shippeddate:date, Freight:float ShipName:string ShipAddress:string ShipCity:string ShipRegion:string ShipPostalCode:string ShipCountry:string --migration false
 

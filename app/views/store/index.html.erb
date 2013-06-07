@@ -11,3 +11,9 @@
     <%= text_field_tag(:country) %>
     <%= submit_tag("Browse") %>
 <% end %>
+
+<%= form_tag("/store/subordinates", :method => "get") do %>
+    <%= label_tag(:lastname, "Show employee subordinates by last name") %>
+    <%= text_field_tag(:lastname) %>
+    <%= submit_tag("Show") %>
+<% end %>

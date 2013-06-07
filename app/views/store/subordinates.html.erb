@@ -1,4 +1,4 @@
-<h1>Listing employees</h1>
+<h1>Listing subordinates for employee <% @lastname %></h1>
 
 <table>
   <tr>
@@ -6,7 +6,7 @@
     <th>Firstname</th>
     <th>Title</th>
     <th>Titleofcourtesy</th>
-    <th>BirthDate</th>
+    <th>Birthdate</th>
     <th>Hiredate</th>
     <th>Address</th>
     <th>City</th>
@@ -23,7 +23,7 @@
     <th></th>
   </tr>
 
-<% @employees.each do |employee| %>
+<% @subordinates.each do |employee| %>
   <tr>
     <td><%= employee.LastName %></td>
     <td><%= employee.FirstName %></td>
@@ -47,7 +47,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Employee', new_employee_path %>

@@ -9,9 +9,13 @@ class StoreController < ApplicationController
   end
 
   def show
-    puts params
     @country = params[:country]
     @customers = Customer.find_all_by_Country(@country)
+  end
+
+  def subordinates
+    @lastname = params[:lastname]
+    @subordinates = Employee.find_by_LastName(@lastname).subordinates
   end
 
 end

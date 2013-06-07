@@ -2,7 +2,7 @@ class Employee < ActiveRecord::Base
 
   set_primary_key :EmployeeID
 
-  attr_accessible :Address, :Birthdate, :City, :Country, :Extension, :FirstName, :Hiredate, :HomePhone, :LastName, :Notes, :Photo, :PhotoPath, :PostalCode, :Region, :Title, :TitleOfCourtesy
+  attr_accessible :Address, :BirthDate, :City, :Country, :Extension, :FirstName, :HireDate, :HomePhone, :LastName, :Notes, :Photo, :PhotoPath, :PostalCode, :Region, :Title, :TitleOfCourtesy
 
   has_many :orders, foreign_key: "EmployeeID"
 
